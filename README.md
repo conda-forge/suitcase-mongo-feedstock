@@ -5,11 +5,9 @@ Home: https://pypi.org/project/suitcase-mongo/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/suitcase-mongo-feedstock/blob/master/LICENSE.txt)
 
 Summary: This is a suitcase subpackage for inserting bluesky documents into MongoDB
-
-
 
 Current build status
 ====================
