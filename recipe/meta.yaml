@@ -1,7 +1,6 @@
 {% set name = "suitcase-mongo" %}
 {% set version = "0.2.0" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -13,16 +12,16 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python
   run:
-    - event-model >=1.8.0rc2
+    - python >=3.6
+    - event-model >=1.8.0
     - pymongo
-    - python
 
 test:
   imports:
@@ -38,7 +37,11 @@ about:
   summary: This is a suitcase subpackage for inserting bluesky documents into MongoDB
   license: BSD-3-Clause
   license_file: LICENSE
+  doc_url: https://blueskyproject.io/suitcase
+  dev_url: https://github.com/bluesky/suitcase-mongo
 
 extra:
   recipe-maintainers:
     - CJ-Wright
+    - conda-forge/event-model
+    - mrakitin
