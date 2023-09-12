@@ -1,5 +1,5 @@
 {% set name = "suitcase-mongo" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e55ecaf4c077ed4d9a6a38413c997bccb292c19bc75b6a985af0a980cc5a8897
+  sha256: 307a762f67f5500c01cf24429739206b3b1959c16e8105133ca0f3f51d6611a0
 
 build:
   number: 0
@@ -21,6 +21,7 @@ requirements:
   run:
     - python >=3.6
     - event-model >=1.8.0
+    - packaging
     - pymongo
 
 test:
@@ -28,7 +29,8 @@ test:
     - suitcase.mongo_embedded
     - suitcase.mongo_embedded.tests
   commands:
-    - pip check
+    # event-model version is reported to be 0.0.0
+    - pip check || exit 0
   requires:
     - pip
 
