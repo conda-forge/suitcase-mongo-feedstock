@@ -1,5 +1,5 @@
 {% set name = "suitcase-mongo" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 307a762f67f5500c01cf24429739206b3b1959c16e8105133ca0f3f51d6611a0
+  sha256: d2ceddf2c8aaa1ca83a33c9df85f384ea09936b7c3a59a55f0476aa55e1cc9ce
 
 build:
   number: 0
