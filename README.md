@@ -148,6 +148,6 @@ Feedstock Maintainers
 =====================
 
 * [@CJ-Wright](https://github.com/CJ-Wright/)
-* [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
+* [@conda-forge/event-model](https://github.com/orgs/conda-forge/teams/event-model/)
 * [@mrakitin](https://github.com/mrakitin/)
 
