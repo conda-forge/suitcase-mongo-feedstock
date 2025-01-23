@@ -1,13 +1,14 @@
 {% set name = "suitcase-mongo" %}
-{% set version = "0.6.0" %}
+{% set name_ = "suitcase_mongo" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 437a2ad92b45a65de736bfa8860b662b7511d2fc58a099807deb50c3ce69c306
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name_ }}-{{ version }}.tar.gz
+  sha256: b8d39fde538ece1768b388ac9d2655cdd83cab52765adc8e56ed5067198586bc
 
 build:
   number: 0
@@ -16,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - event-model >=1.8.0
     - packaging
     - pymongo
@@ -33,6 +34,7 @@ test:
     - pip check || exit 0
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/suitcase-mongo/
@@ -44,6 +46,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
     - conda-forge/event-model
     - mrakitin
