@@ -1,5 +1,5 @@
 {% set name = "suitcase-mongo" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 437a2ad92b45a65de736bfa8860b662b7511d2fc58a099807deb50c3ce69c306
+  sha256: b8d39fde538ece1768b388ac9d2655cdd83cab52765adc8e56ed5067198586bc
 
 build:
   number: 1
@@ -45,6 +45,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
     - conda-forge/event-model
     - mrakitin
